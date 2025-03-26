@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>error</title>
+        <!-- 引入打包好的文件 -->
+        <script src="../../dist/monitor.js"></script>
+        <!-- <link rel="stylesheet" href="./assets/index-46867abb.css">
+    <script src="http://wwwabc.com/dist/a.js"></script> -->
+        <script>
+            monitor.init({
+                url: "http://localhost:9800/reportData",//上报地址
+            });
+        </script>
+    </head>
+    <body>
+        <img src="http://toutiao.com/x.png" alt="" />
+        <img src="http://toutiao.com/x2.png" alt="" />
+        <img src="http://toutiao.com/x3.png" alt="" />
+        <script>
+            function test() {
+                return Promise.reject(Error("promise"));
+            }
+            function test1() {
+                return Promise.reject(Error("async"));
+            }
+            test();
+            test1();
+            throw Error("test");
+            // let abc = 2;
+            // abc();
+        </script>
+    </body>
+</html>
