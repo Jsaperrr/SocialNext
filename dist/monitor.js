@@ -795,7 +795,9 @@ var monitor = (function (exports) {
    */
   function init(options) {
     setConfig(options);
-    error();
+    //error();
+    performance$1();
+    //behavior();
   }
   var webEyeSDK = {
     install: install,
